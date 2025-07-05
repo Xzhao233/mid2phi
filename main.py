@@ -223,7 +223,8 @@ for i, note in enumerate(dedup_notes):
     }
     
     # hold，添加holdTime
-    if note_type == 3:
+    # 卧槽我错了 啥都得加holdTime
+    if True:
         note_obj["holdTime"] = note["duration"]
     
     chart["judgeLineList"][0]["notesAbove"].append(note_obj)
@@ -298,7 +299,7 @@ print(f"filtered {filtered_count} notes, deleted {dedup_count} repeated noted")
 print(f"range: {min(note['positionX'] for note in dedup_notes):.2f}to{max(note['positionX'] for note in dedup_notes):.2f}")
 
 '''
-phi2mid ver 1.00
+phi2mid ver 1.0.1
 why am i doing this?
 by desivr
 2025.7.5
